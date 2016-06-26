@@ -22,8 +22,8 @@ namespace Business_Logic
         public int yearRegistration { get; set; }
         public string Shicva { get; set; }
         public string @class { get; set; }
-        public int cityCode { get; set; }
-        public string streetCode { get; set; }
+        public string city { get; set; }
+        public string street { get; set; }
         public int houseNumber { get; set; }
         public string zipCode { get; set; }
         public string CellPhone { get; set; }
@@ -33,5 +33,17 @@ namespace Business_Logic
         public Nullable<bool> EmailConfirm { get; set; }
         public Nullable<bool> GetAlertByEmail { get; set; }
         public Nullable<bool> paymentStatus { get; set; }
+        public Nullable<System.DateTime> dateCreate { get; set; }
+        public Nullable<System.DateTime> lastUpdate { get; set; }
+        public bool registrationStatus { get; set; }
+        public Nullable<bool> subsidy { get; set; }
+        public string Color { get; set; }
+        public Nullable<double> Lat { get; set; }
+        public Nullable<double> Lng { get; set; }
+        public Nullable<bool> Active { get; set; }
+        public Nullable<double> distanceFromSchool { get; set; }
+        public Nullable<bool> siblingAtSchool { get; set; }
+        public Nullable<bool> specialRequest { get; set; }
+        public string request { get; set; }
     }
 }

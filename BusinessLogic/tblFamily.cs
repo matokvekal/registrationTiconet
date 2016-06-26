@@ -20,11 +20,11 @@ namespace Business_Logic
         public string parent1FirstName { get; set; }
         public string parent1LastName { get; set; }
         public string parent1Email { get; set; }
-        public Nullable<bool> parent1EmailConfirm { get; set; }
-        public Nullable<bool> parent1GetAlertByEmail { get; set; }
+        public bool parent1EmailConfirm { get; set; }
+        public bool parent1GetAlertByEmail { get; set; }
         public string parent1CellPhone { get; set; }
-        public Nullable<bool> parent1CellConfirm { get; set; }
-        public Nullable<bool> parent1GetAlertBycell { get; set; }
+        public bool parent1CellConfirm { get; set; }
+        public bool parent1GetAlertBycell { get; set; }
         public string parent2Type { get; set; }
         public string parent2FirstName { get; set; }
         public string parent2LastName { get; set; }
@@ -34,10 +34,13 @@ namespace Business_Logic
         public string parent2CellPhone { get; set; }
         public Nullable<bool> parent2CellConfirm { get; set; }
         public Nullable<bool> parent2GetAlertBycell { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
+        public System.DateTime date { get; set; }
         public Nullable<System.DateTime> LastUpdate { get; set; }
         public Nullable<bool> paymentOk { get; set; }
-        public Nullable<System.DateTime> payMentDateConfirm { get; set; }
+        public Nullable<System.DateTime> paymentDateConfirm { get; set; }
         public bool iAgree { get; set; }
+        public bool subsidy { get; set; }
+        public bool allredyUsed { get; set; }
+        public bool oneParentOnly { get; set; }
     }
 }

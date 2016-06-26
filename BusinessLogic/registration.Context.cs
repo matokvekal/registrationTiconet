@@ -25,10 +25,14 @@ namespace Business_Logic
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tblDictSystem> tblDictSystems { get; set; }
+        public virtual DbSet<Login> Logins { get; set; }
+        public virtual DbSet<tblAlertsQueue> tblAlertsQueues { get; set; }
         public virtual DbSet<tblCulture> tblCultures { get; set; }
+        public virtual DbSet<tblDictSystem> tblDictSystems { get; set; }
         public virtual DbSet<tblFamily> tblFamilies { get; set; }
-        public virtual DbSet<tblYear> tblYears { get; set; }
+        public virtual DbSet<tblStreet> tblStreets { get; set; }
         public virtual DbSet<tblStudent> tblStudents { get; set; }
+        public virtual DbSet<tblSystem> tblSystems { get; set; }
+        public virtual DbSet<tblYear> tblYears { get; set; }
     }
 }

@@ -1,9 +1,12 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business_Logic;
+using System.Data.Entity;
 
 namespace Business_Logic
 {
@@ -30,5 +33,66 @@ namespace Business_Logic
 
             return (db.tblFamilies.Any(x => x.parent1Email == email));
         }
+
+
+
+
+        public static bool checkIfFamilyExist(int familyId)
+        {
+            BusProjectEntities db = new BusProjectEntities();
+
+            return (db.tblFamilies.Any(x => x.familyId == familyId));
+        }
+
+
+
+        public static bool checkIfIdExist(string id)
+        {
+            BusProjectEntities db = new BusProjectEntities();
+
+            return (db.tblFamilies.Any(x => x.ParentId == id));
+        }
+
+        public static bool checkIfEmailExist(string email)
+        {
+            BusProjectEntities db = new BusProjectEntities();
+
+            return (db.tblFamilies.Any(x => x.parent1Email == email));
+        }
+        public static int createFamily(tblFamily c)
+        {
+            try
+            {
+                BusProjectEntities db = new BusProjectEntities();
+                tblFamily v = new tblFamily();
+                c.familyId = 9999999;
+                c.date = DateTime.Today;
+                c.LastUpdate = DateTime.Today; 
+                db.tblFamilies.Add(c);
+                db.SaveChanges();
+                return c.familyId;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+        public static void update(tblFamily c)
+        {
+
+            try
+            {
+
+                BusProjectEntities db = new BusProjectEntities();
+                db.Entry<tblFamily>(c).State = EntityState.Modified;
+                db.SaveChanges();
+
+            }
+            catch
+            {
+            }
+        }
     }
 }
+
